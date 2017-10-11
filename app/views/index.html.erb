@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ya Recipes</title>
+  </head>
+  <body>
+    <% @recipes.each.with_index(1) do |r, i| %>
+    <p><a href="/recipes/<%=r.id %>"><%="#{i}. #{r.name}"%></a></p>
+    <p><%= "#{r.ingredients}"%></p>
+    <p><%= "#{r.cook_time}"%></p>
+    <% end %>
+  </body>
+</html>
